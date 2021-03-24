@@ -36,7 +36,23 @@ const objectValues = objeto => Object.values(objeto);
 // console.log(objectValues(lesson2));
 
 // Questão 5
-const allLessons = Object.assign( {}, {lesson1, lesson2, lesson3});
-// console.log(allLessons);
+const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
+// console.log(allLessons)
 
-//Questão 6
+// Questão 6
+const students = (objeto) => {
+    let total = 0;
+    for (chave in objeto) {
+        total += objeto[chave].numeroEstudantes;
+    }
+    return total;
+}
+// console.log(students(allLessons));
+
+// Questão 7
+const getValueByNumber = (objeto, indice) => Object.values(objeto)[indice];
+// console.log(getValueByNumber(lesson1, 0));
+
+// Questão 8
+const verifyPair = (objeto, chave, valor) => Object.entries(objeto).toString().includes(chave && valor);
+// console.log(verifyPair(lesson3, 'turno', 'tarde'));
