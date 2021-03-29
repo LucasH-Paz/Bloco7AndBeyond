@@ -1,6 +1,16 @@
-const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+const fatorial = numero => {
+    let resultado = 1;
+    for (let index = 0; index < numero; index += 1) {
+        resultado += resultado * index;
+    }
+    return resultado;
+}
 
-const organizaLista = lista => lista.sort(function(a, b){return a-b});
+console.log(fatorial(3));
 
-organizaLista(oddsAndEvens);
-console.log(`Os números ${oddsAndEvens} se encontram ordenados de forma crescente!`);
+const maiorPalavra = string => string.split(' ').sort((palavra1, palavra2) => palavra2.length - palavra1.length)[0];
+// separa string em palvras a cada espaço -> organizar as palavras em ordem decrescente ->
+// Retorna primeiro valor do array (Maior palavra)
+// a função dentro do sort compara palavra a palavra e as organiza (Analise Combinatória)
+
+console.log(maiorPalavra("Antônio foi no banheiro e não sabemos o que aconteceu"));
